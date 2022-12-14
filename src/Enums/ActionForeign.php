@@ -1,6 +1,6 @@
 <?php
 
-namespace bawanehwecan\Generator\Enums;
+namespace BawanehWeCan\Generator\Enums;
 
 enum ActionForeign: int
 {

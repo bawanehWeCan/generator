@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use bawanehwecan\Generator\Http\Controllers\GeneratorController;
-use bawanehwecan\Generator\Http\Middleware\GeneratorOnlyWorkOnLocal;
+use BawanehWeCan\Generator\Http\Controllers\GeneratorController;
+use BawanehWeCan\Generator\Http\Middleware\GeneratorOnlyWorkOnLocal;
 
 Route::middleware(['web'])->group(function () {
     Route::middleware(GeneratorOnlyWorkOnLocal::class)->group(function () {

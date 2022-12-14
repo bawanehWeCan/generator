@@ -1,6 +1,6 @@
 <?php
 
-namespace bawanehwecan\Generator\Http\Middleware;
+namespace BawanehWeCan\Generator\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

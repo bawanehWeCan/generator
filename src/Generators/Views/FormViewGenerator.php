@@ -1,8 +1,8 @@
 <?php
 
-namespace bawanehwecan\Generator\Generators\Views;
+namespace BawanehWeCan\Generator\Generators\Views;
 
-use bawanehwecan\Generator\Generators\GeneratorUtils;
+use BawanehWeCan\Generator\Generators\GeneratorUtils;
 
 class FormViewGenerator
 {

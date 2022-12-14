@@ -1,11 +1,11 @@
 <?php
 
-namespace bawanehwecan\Generator\Http\Controllers;
+namespace BawanehWeCan\Generator\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use bawanehwecan\Generator\Enums\GeneratorType;
-use bawanehwecan\Generator\Services\GeneratorService;
-use bawanehwecan\Generator\Http\Requests\StoreGeneratorRequest;
+use BawanehWeCan\Generator\Enums\GeneratorType;
+use BawanehWeCan\Generator\Services\GeneratorService;
+use BawanehWeCan\Generator\Http\Requests\StoreGeneratorRequest;
 use Symfony\Component\HttpFoundation\Response;
 
 class GeneratorController extends Controller

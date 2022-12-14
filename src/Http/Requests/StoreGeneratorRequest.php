@@ -1,8 +1,8 @@
 <?php
 
-namespace bawanehwecan\Generator\Http\Requests;
+namespace BawanehWeCan\Generator\Http\Requests;
 
-use bawanehwecan\Generator\Enums\GeneratorType;
+use BawanehWeCan\Generator\Enums\GeneratorType;
 use Illuminate\Validation\Rules\Enum;
 use Illuminate\Foundation\Http\FormRequest;
 

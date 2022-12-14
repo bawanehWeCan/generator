@@ -1,6 +1,6 @@
 <?php
 
-namespace bawanehwecan\Generator\Generators;
+namespace BawanehWeCan\Generator\Generators;
 
 use Illuminate\Support\Facades\Schema;
 
