@@ -6,7 +6,7 @@
     "keywords": ["package", "laravel", "starter-app", "crud-generator"],
     "autoload": {
         "psr-4": {
-            "bawanehwecan\\Generator\\": "src/"
+            "bawanehWeCan\\Generator\\": "src/"
         },
         "files": [
             "src/Helpers/helper.php"
