@@ -1,6 +1,6 @@
 <?php
 
-namespace bawanehWeCan\Generator\Generators;
+namespace bawanehwecan\Generator\Generators;
 
 class RequestGenerator
 {

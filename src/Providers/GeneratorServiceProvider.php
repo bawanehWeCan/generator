@@ -1,10 +1,10 @@
 <?php
 
-namespace bawanehWeCan\Generator\Providers;
+namespace bawanehwecan\Generator\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\AboutCommand;
-use bawanehWeCan\Generator\Commands\{SetSidebarType, PublishAllFiles};
+use bawanehwecan\Generator\Commands\{SetSidebarType, PublishAllFiles};
 
 class GeneratorServiceProvider extends ServiceProvider
 {

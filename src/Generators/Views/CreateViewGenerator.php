@@ -1,8 +1,8 @@
 <?php
 
-namespace bawanehWeCan\Generator\Generators\Views;
+namespace bawanehwecan\Generator\Generators\Views;
 
-use bawanehWeCan\Generator\Generators\GeneratorUtils;
+use bawanehwecan\Generator\Generators\GeneratorUtils;
 
 class CreateViewGenerator
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace bawanehWeCan\Generator\Generators;
+namespace bawanehwecan\Generator\Generators;
 
-use bawanehWeCan\Generator\Enums\ActionForeign;
+use bawanehwecan\Generator\Enums\ActionForeign;
 
 class MigrationGenerator
 {

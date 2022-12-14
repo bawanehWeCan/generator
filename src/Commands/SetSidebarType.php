@@ -1,8 +1,8 @@
 <?php
 
-namespace bawanehWeCan\Generator\Commands;
+namespace bawanehwecan\Generator\Commands;
 
-use bawanehWeCan\Generator\Generators\GeneratorUtils;
+use bawanehwecan\Generator\Generators\GeneratorUtils;
 use Illuminate\Console\Command;
 
 class SetSidebarType extends Command

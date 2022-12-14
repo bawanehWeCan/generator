@@ -5,12 +5,12 @@ https://user-images.githubusercontent.com/62506582/200510814-9b2ca922-bd35-4e02-
 
 <div align="center">
 
-[![All Contributors](https://img.shields.io/github/contributors/bawanehWeCan/generator-src?style=flat-square)](https://github.com/bawanehWeCan/generator/graphs/contributors)
-![GitHub last commit](https://img.shields.io/github/last-commit/bawanehWeCan/generator-src.svg?style=flat-square)
-[![License](https://img.shields.io/github/license/bawanehWeCan/generator-src.svg?style=flat-square)](LICENSE)
-[![Issues](https://img.shields.io/github/issues/bawanehWeCan/generator-src?style=flat-square)](Issues)
-[![Forks](https://img.shields.io/github/forks/bawanehWeCan/generator-src?style=flat-square)](Forks)
-[![Stars](https://img.shields.io/github/stars/bawanehWeCan/generator-src?style=flat-square)](Stars)
+[![All Contributors](https://img.shields.io/github/contributors/bawanehwecan/generator-src?style=flat-square)](https://github.com/bawanehwecan/generator/graphs/contributors)
+![GitHub last commit](https://img.shields.io/github/last-commit/bawanehwecan/generator-src.svg?style=flat-square)
+[![License](https://img.shields.io/github/license/bawanehwecan/generator-src.svg?style=flat-square)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/bawanehwecan/generator-src?style=flat-square)](Issues)
+[![Forks](https://img.shields.io/github/forks/bawanehwecan/generator-src?style=flat-square)](Forks)
+[![Stars](https://img.shields.io/github/stars/bawanehwecan/generator-src?style=flat-square)](Stars)
 
 </div>
 
@@ -26,7 +26,7 @@ https://user-images.githubusercontent.com/62506582/200510814-9b2ca922-bd35-4e02-
 ## Setup
 1. Installation
 ```sh
-composer require bawanehWeCan/generator --dev
+composer require bawanehwecan/generator --dev
 ```
 > Since this package will overwrite some files, it must be installed after a brand-new Laravel installation.
 
@@ -35,7 +35,7 @@ composer require bawanehWeCan/generator --dev
  /*
   * Package Service Providers...
   */
-  bawanehWeCan\Generator\Providers\GeneratorServiceProvider::class,
+  bawanehwecan\Generator\Providers\GeneratorServiceProvider::class,
 ```
 
 3. Publish vendor 
@@ -97,7 +97,7 @@ Login
 [MIT License](./LICENSE)
 
 ## Support
-You can support me at [Github Sponsors](https://github.com/sponsors/bawanehWeCan), [Ko-fi](https://ko-fi.com/mzulfahmi) or [Saweria](https://saweria.co/bawanehWeCan)
+You can support me at [Github Sponsors](https://github.com/sponsors/bawanehwecan), [Ko-fi](https://ko-fi.com/mzulfahmi) or [Saweria](https://saweria.co/bawanehwecan)
 
 <a href="https://www.buymeacoffee.com/mzulfahmi" target="_blank">
 <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;">

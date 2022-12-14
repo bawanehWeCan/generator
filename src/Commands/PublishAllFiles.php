@@ -1,6 +1,6 @@
 <?php
 
-namespace bawanehWeCan\Generator\Commands;
+namespace bawanehwecan\Generator\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;

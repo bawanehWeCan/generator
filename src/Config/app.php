@@ -169,7 +169,7 @@ return [
         Yajra\DataTables\DataTablesServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
-        bawanehWeCan\Generator\Providers\GeneratorServiceProvider::class,
+        bawanehwecan\Generator\Providers\GeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...

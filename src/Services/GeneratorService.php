@@ -1,10 +1,10 @@
 <?php
 
-namespace bawanehWeCan\Generator\Services;
+namespace bawanehwecan\Generator\Services;
 
 use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\HttpFoundation\Response;
-use bawanehWeCan\Generator\Generators\{
+use bawanehwecan\Generator\Generators\{
     ControllerGenerator,
     MenuGenerator,
     ModelGenerator,
@@ -14,7 +14,7 @@ use bawanehWeCan\Generator\Generators\{
     RouteGenerator,
     ViewComposerGenerator
 };
-use bawanehWeCan\Generator\Generators\Views\{
+use bawanehwecan\Generator\Generators\Views\{
     ActionViewGenerator,
     CreateViewGenerator,
     EditViewGenerator,
