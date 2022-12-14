@@ -1,12 +1,12 @@
 {
-    "name": "bawanehWeCan/generator",
+    "name": "bawanehwecan/generator",
     "description": "Laravel starter app & simple crud generator",
     "type": "library",
     "license": "MIT",
     "keywords": ["package", "laravel", "starter-app", "crud-generator"],
     "autoload": {
         "psr-4": {
-            "bawanehWeCan\\Generator\\": "src/"
+            "bawanehwecan\\Generator\\": "src/"
         },
         "files": [
             "src/Helpers/helper.php"
