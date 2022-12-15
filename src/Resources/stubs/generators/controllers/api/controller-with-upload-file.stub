@@ -1,0 +1,53 @@
+<?php
+
+{{namespace}}
+use {{modelPath}};
+use {{requestPath}};
+use BawanehWeCan\Generator\Repositories\Repository;
+use App\Http\Resources\{{modelNameSingularPascalCase}}Resource;
+
+use BawanehWeCan\Generator\Http\Controllers\ApiController;
+
+use Image;
+
+class {{modelNameSingularPascalCase}}Controller extends ApiController
+{
+    public function __construct()
+    {
+        $this->resource = {{modelNameSingularPascalCase}}Resource::class;
+        $this->model = app({{modelNameSingularPascalCase}}::class);
+        $this->repositry =  new Repository($this->model);
+    }
+
+    public function save(Store{{modelNameSingularPascalCase}}Request $request)
+    {
+
+        $attr = $request->validated();
+        {{passwordFieldStore}}{{inputMonths}}
+{{storeCode}}
+        $model = $this->repositry->save( $attr );
+
+
+        if ($model) {
+            return $this->returnData( 'data' , new $this->resource( $model ), __('Succesfully'));
+        }
+
+        return $this->returnError(__('Sorry! Failed to create !'));
+    }
+
+    public function edit($id, Update{{modelNameSingularPascalCase}}Request $request)
+    {
+        ${{modelNameSingularCamelCase}} = $this->repositry->getByID($id);
+
+        $attr = $request->validated();
+        {{passwordFieldUpdate}}{{inputMonths}}
+{{updateCode}}
+
+        if (${{modelNameSingularCamelCase}}) {
+            ${{modelNameSingularCamelCase}} = $this->repositry->edit( $id,$attr );
+            return $this->returnData('data', new $this->resource( ${{modelNameSingularCamelCase}} ), __('Updated succesfully'));
+        }
+
+        return $this->returnError(__('Sorry! Failed to get !'));
+    }
+}

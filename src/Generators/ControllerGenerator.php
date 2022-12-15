@@ -26,6 +26,7 @@ class ControllerGenerator
         switch ($path) {
             case '':
                 $namespace = "namespace App\Http\Controllers;\n";
+                $namespaceApi = "namespace App\Http\Controllers\Api;\n";
 
                 /**
                  * will generate something like:
@@ -43,6 +44,8 @@ class ControllerGenerator
                  * use App\Http\Controllers\Controller;
                  */
                 $namespace = "namespace App\Http\Controllers\\$path;\n\nuse App\Http\Controllers\Controller;";
+                $namespaceApi = "namespace App\Http\Controllers\Api;\n";
+
 
                 /**
                  * Will generate something like:
@@ -96,10 +99,10 @@ class ControllerGenerator
                     $selectedColumns = GeneratorUtils::selectColumnAfterIdAndIdItself($constrainName);
                     $columnAfterId = GeneratorUtils::getColumnAfterId($constrainName);
 
-                    if($countForeidnId + 1 < $i){
+                    if ($countForeidnId + 1 < $i) {
                         $relations .= "'$constrainSnakeCase:$selectedColumns', ";
                         $query .= "'$constrainSnakeCase:$selectedColumns', ";
-                    }else{
+                    } else {
                         $relations .= "'$constrainSnakeCase:$selectedColumns'";
                         $query .= "'$constrainSnakeCase:$selectedColumns'";
                     }
@@ -309,6 +312,102 @@ class ControllerGenerator
                     ],
                     GeneratorUtils::getTemplate('controllers/controller-with-upload-file')
                 );
+
+                $templateApi = str_replace(
+                    [
+                        '{{modelNameSingularPascalCase}}',
+                        '{{modelNameSingularCamelCase}}',
+                        '{{modelNamePluralCamleCase}}',
+                        '{{modelNamePluralKebabCase}}',
+                        '{{modelNameSpaceLowercase}}',
+                        '{{indexCode}}',
+                        '{{storeCode}}',
+                        '{{updateCode}}',
+                        '{{deleteCode}}',
+                        '{{loadRelation}}',
+                        '{{addColumns}}',
+                        '{{query}}',
+                        '{{namespace}}',
+                        '{{requestPath}}',
+                        '{{modelPath}}',
+                        '{{viewPath}}',
+                        '{{passwordFieldStore}}',
+                        '{{passwordFieldUpdate}}',
+                        '{{updateDataAction}}',
+                        '{{inputMonths}}',
+                    ],
+                    [
+                        $modelNameSingularPascalCase,
+                        $modelNameSingularCamelCase,
+                        $modelNamePluralCamelCase,
+                        $modelNamePluralKebabCase,
+                        $modelNameSpaceLowercase,
+                        $indexCode,
+                        $storeCode,
+                        $updateCode,
+                        $deleteCode,
+                        $relations,
+                        $addColumns,
+                        $query,
+                        $namespaceApi,
+                        $requestPath,
+                        $path != '' ? "App\Models\\$path\\$modelNameSingularPascalCase" : "App\Models\\$modelNameSingularPascalCase",
+                        $path != '' ? str_replace('\\', '.', strtolower($path)) . "." : '',
+                        $passwordFieldStore,
+                        $passwordFieldUpdate,
+                        $updateDataAction,
+                        $inputMonths
+                    ],
+                    GeneratorUtils::getTemplate('controllers/api/controller-with-upload-file')
+                );
+
+                $templateResource = str_replace(
+                    [
+                        '{{modelNameSingularPascalCase}}',
+                        '{{modelNameSingularCamelCase}}',
+                        '{{modelNamePluralCamleCase}}',
+                        '{{modelNamePluralKebabCase}}',
+                        '{{modelNameSpaceLowercase}}',
+                        '{{indexCode}}',
+                        '{{storeCode}}',
+                        '{{updateCode}}',
+                        '{{deleteCode}}',
+                        '{{loadRelation}}',
+                        '{{addColumns}}',
+                        '{{query}}',
+                        '{{namespace}}',
+                        '{{requestPath}}',
+                        '{{modelPath}}',
+                        '{{viewPath}}',
+                        '{{passwordFieldStore}}',
+                        '{{passwordFieldUpdate}}',
+                        '{{updateDataAction}}',
+                        '{{inputMonths}}',
+                    ],
+                    [
+                        $modelNameSingularPascalCase,
+                        $modelNameSingularCamelCase,
+                        $modelNamePluralCamelCase,
+                        $modelNamePluralKebabCase,
+                        $modelNameSpaceLowercase,
+                        $indexCode,
+                        $storeCode,
+                        $updateCode,
+                        $deleteCode,
+                        $relations,
+                        $addColumns,
+                        $query,
+                        $namespace,
+                        $requestPath,
+                        $path != '' ? "App\Models\\$path\\$modelNameSingularPascalCase" : "App\Models\\$modelNameSingularPascalCase",
+                        $path != '' ? str_replace('\\', '.', strtolower($path)) . "." : '',
+                        $passwordFieldStore,
+                        $passwordFieldUpdate,
+                        $updateDataAction,
+                        $inputMonths
+                    ],
+                    GeneratorUtils::getTemplate('resource')
+                );
                 break;
             default:
                 /**
@@ -355,6 +454,88 @@ class ControllerGenerator
                     ],
                     GeneratorUtils::getTemplate('controllers/controller')
                 );
+                $templateApi = str_replace(
+                    [
+                        '{{modelNameSingularPascalCase}}',
+                        '{{modelNameSingularCamelCase}}',
+                        '{{modelNamePluralCamelCase}}',
+                        '{{modelNamePluralKebabCase}}',
+                        '{{modelNameSpaceLowercase}}',
+                        '{{loadRelation}}',
+                        '{{addColumns}}',
+                        '{{query}}',
+                        '{{namespace}}',
+                        '{{requestPath}}',
+                        '{{modelPath}}',
+                        '{{viewPath}}',
+                        '{{passwordFieldStore}}',
+                        '{{passwordFieldUpdate}}',
+                        '{{insertDataAction}}',
+                        '{{updateDataAction}}',
+                        '{{inputMonths}}',
+                    ],
+                    [
+                        $modelNameSingularPascalCase,
+                        $modelNameSingularCamelCase,
+                        $modelNamePluralCamelCase,
+                        $modelNamePluralKebabCase,
+                        $modelNameSpaceLowercase,
+                        $relations,
+                        $addColumns,
+                        $query,
+                        $namespace,
+                        $requestPath,
+                        $path != '' ? "App\Models\\$path\\$modelNameSingularPascalCase" : "App\Models\\$modelNameSingularPascalCase",
+                        $path != '' ? str_replace('\\', '.', strtolower($path)) . "." : '',
+                        $passwordFieldStore,
+                        $passwordFieldUpdate,
+                        $insertDataAction,
+                        $updateDataAction,
+                        $inputMonths
+                    ],
+                    GeneratorUtils::getTemplate('controllers/api/controller')
+                );
+                $templateResource = str_replace(
+                    [
+                        '{{modelNameSingularPascalCase}}',
+                        '{{modelNameSingularCamelCase}}',
+                        '{{modelNamePluralCamelCase}}',
+                        '{{modelNamePluralKebabCase}}',
+                        '{{modelNameSpaceLowercase}}',
+                        '{{loadRelation}}',
+                        '{{addColumns}}',
+                        '{{query}}',
+                        '{{namespace}}',
+                        '{{requestPath}}',
+                        '{{modelPath}}',
+                        '{{viewPath}}',
+                        '{{passwordFieldStore}}',
+                        '{{passwordFieldUpdate}}',
+                        '{{insertDataAction}}',
+                        '{{updateDataAction}}',
+                        '{{inputMonths}}',
+                    ],
+                    [
+                        $modelNameSingularPascalCase,
+                        $modelNameSingularCamelCase,
+                        $modelNamePluralCamelCase,
+                        $modelNamePluralKebabCase,
+                        $modelNameSpaceLowercase,
+                        $relations,
+                        $addColumns,
+                        $query,
+                        $namespaceApi,
+                        $requestPath,
+                        $path != '' ? "App\Models\\$path\\$modelNameSingularPascalCase" : "App\Models\\$modelNameSingularPascalCase",
+                        $path != '' ? str_replace('\\', '.', strtolower($path)) . "." : '',
+                        $passwordFieldStore,
+                        $passwordFieldUpdate,
+                        $insertDataAction,
+                        $updateDataAction,
+                        $inputMonths
+                    ],
+                    GeneratorUtils::getTemplate('resource')
+                );
                 break;
         }
 
@@ -364,11 +545,14 @@ class ControllerGenerator
         switch ($path) {
             case '':
                 file_put_contents(app_path("/Http/Controllers/{$modelNameSingularPascalCase}Controller.php"), $template);
+                file_put_contents(app_path("/Http/Controllers/Api/{$modelNameSingularPascalCase}Controller.php"), $templateApi);
+                file_put_contents(app_path("/Http/Resources/{$modelNameSingularPascalCase}Resource.php"), $templateResource);
                 break;
             default:
                 $fullPath = app_path("/Http/Controllers/$path/");
                 GeneratorUtils::checkFolder($fullPath);
                 file_put_contents("$fullPath" . $modelNameSingularPascalCase . "Controller.php", $template);
+                file_put_contents("$fullPath" . $modelNameSingularPascalCase . "Controller.php", $templateApi);
                 break;
         }
     }

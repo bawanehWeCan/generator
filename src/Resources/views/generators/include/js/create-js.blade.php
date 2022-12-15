@@ -501,7 +501,7 @@
                 })
             },
             error: function(xhr, status, response) {
-                console.error(xhr.responseText)
+                console.error(response)
 
                 let validationErrors = $('#validation-errors')
                 let validationUl = $('#validation-errors .alert-danger ul')
